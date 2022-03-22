@@ -1,0 +1,38 @@
+Задание 6.1
+
+right - ordered_array_right_pt
+// правая часть упорядоченного массива
+
+s_salary - salaries_wrong_order
+// список зарплат в неправильном порядке
+
+emp_dict - employee_salary_db
+// база данных сотрудник-зарплата
+
+sal_fixed - salaries_correct_order
+// список зарплат в правильном порядке
+
+row_indexes - matrix_row_indexes
+col_indexes - matrix_col_indexes
+// индексы в строках и столбцах матрицы
+
+Задание 6.2
+
+1) letter_index_cnt // индекс буквы в строке
+2) input_str, output_str // входные и выходные данные в формате строк
+3) raw_data // необработанные данные
+4) object_id // идентификатор сущности
+
+Задание 6.3
+
+Аргументы функции расчета объем цилиндра, cylinder_volume(cylinder_height, cylinder_radius)
+Атрибуты класса Product: product_id, product_name, product_price, amount_in_stock.
+Размеры матрицы: matrix_row_num, matrix_col_num. 
+
+Задание 6.4
+
+N - allowed_steps_num
+val - letters_in_string_num
+combos - unique_combos_list
+h - tree_height
+w - tree_width

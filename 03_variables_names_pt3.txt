@@ -1,0 +1,47 @@
+Задание 7.1
+
+is_there - substring_is_found
+checked - parameter_is_checked
+valid - str_is_valid
+val_null - is_null
+formatted - correct_format
+
+Задание 7.2
+
+array_status - array_is_sorted
+result - parsing_ok
+// более наглядно, в чем суть выводимого булевого значения
+
+"if True:" - "if value_matches:"
+// вводим переменную с именем, указывающим на статус проверки значения
+
+Задание 7.3
+
+// было
+for j in i:
+    ...
+
+// стало
+for char in string:
+    ...
+
+// сильно повышает читаемость кода, когда в большом теле программы есть функция с посимвольной проверкой строк
+
+Задание 7.4
+
+max_value, min_value
+self.head, self.tail
+first_char, last_char
+
+Задание 7.5
+
+input - raw_data
+cnt - max_index
+
+// можно сократить кол-во кода, используя подходящую функцию
+inp_list.sort()
+sorted_list = inp_list
+
+// стало
+sorted_list = sorted(inp_list)
+

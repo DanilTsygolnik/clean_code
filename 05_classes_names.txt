@@ -1,0 +1,16 @@
+Задание 3.1
+LinkedList2 - DoublyLinkedList
+EmployeeInfo - Employee
+Login - LoginUI
+DB_access - DatabaseEditor
+ConvertImageFmt - ImageFormatConverter
+
+Задание 3.2
+iter_rotate - rotate_ring_once
+src_format - format_for_output
+transform - array_transform_once
+double_transform- array_transform_twice
+combos - all_possible_combos
+get_combo - numbers_array_reversed
+rule_one - can_use_rule_one
+rule_two - can_use_rule_two

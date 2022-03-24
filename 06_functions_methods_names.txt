@@ -1,0 +1,28 @@
+compare_chars - all_chars_are_same
+// функция возвращает тип bool, новое имя более точно описывает суть
+
+
+fact_rec - factorial_recursive_calc
+fact_iter - factorial_iterative_calc
+iter_rotate - rotate_ring_once
+transform - transform_array_once
+encrypt_str - get_encrypted_string
+src_format - format_for_output
+get_matrix - create_matrix
+parse - save_page_as_html
+get_sum -> sum_digits_in_string
+// новое название более точно отражает назначение функции
+
+
+// было : функция возвращает список, значения приходилось извлекать по индексу.
+str_col_num() -> [num_str, num_col]
+
+// стало: разбил на 2 функции, код стал нагляднее; удобнее извлекать значения
+get_num_strings(matrix) -> int
+get_num_columns(matrix) -> int
+
+
+// было: расшифровка и вывод сообщения через print()
+decrypt(encrypted_str)
+// стало: исключил из функции побочный эффект печати и назначил более точное название
+get_decrypted_str(encrypted_str)

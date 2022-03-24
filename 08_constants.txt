@@ -1,0 +1,17 @@
+23 - DEFAULT_TONER_CONSUMPTION
+N - MESSAGE_LENGTH
+5 - API_REQUEST_DELAY_SEC
+// заменил литерал на именованную константу
+
+big_n, small_n - NUMBER_BIG, NUMBER_SMALL
+distance - DISTANCE
+num_traffic_lights - NUM_TRAFFIC_LIGHTS
+file_path - DEFAULT_FILE_PATH
+// привел название к рекомендованному виду
+
+H1 - NUM_STRINGS
+H2 - NUM_WORDS
+H1 - MAP_HEIGHT
+W1 - MAP_WIDTH
+MAP - TANKS_POSITIONS
+// заменил название константы на более наглядное и привел к рекомендованному виду

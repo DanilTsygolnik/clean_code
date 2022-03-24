@@ -1,0 +1,12 @@
+ind_1, ind_2 - left_index, right_index
+result - sorted_array
+input - unsorted_list
+cnt - curr_index
+output - template_data + correct_data
+max_num, min_num - number_max, number_min
+s_str1, s_str2 - str_left_part, str_right_part
+total_doors - num_doors
+door_num - door_index
+items_total - num_items_in_stock
+tail_ind_cnt - curr_tail_index
+ind_limit - max_index

@@ -1,5 +1,8 @@
 class Square:
     '''
+    С помощью класса создаются квадраты карты.
+    
+    Результат команды `square_X = Square(3,2)` на схеме ниже:
         w i d t h
         1 2 3 4 5
         _ _ _ _ _
@@ -10,7 +13,6 @@ class Square:
     h 5|* * * * *
     t 6|* * * * *
 
-    square_X = Square(3,2)
     '''
 
     def __init__(self, HEIGHT, WIDTH):
@@ -46,10 +48,13 @@ class Square:
         return self.__neighbors
 
     def set_neighbors(self, neighbors_list):
+        '''
+        Получает на вход список объектов класса Squares
+        '''
         self.__neighbors = neighbors_list
 
 
-class CompaignMap:
+class CampaignMap:
 
     def __init__(self, MAP_HEIGHT=1, MAP_WIDTH=1):
 
@@ -117,12 +122,17 @@ class CompaignMap:
 
         self.height = MAP_HEIGHT
         self.width = MAP_WIDTH
-        self.grid = create_grid(self) # словарь для мгновенного обращения по id
+        self.__grid = create_grid(self) # словарь для мгновенного обращения по id
+
+    def access_square(self, square_id):
+        return self.__grid[square_id]
 
     def get_squares_ids(self):
+        '''for testing'''
         return set(self.grid.keys())
 
     def get_square_neighbors_ids(self, square_id):
+        '''for testing'''
         square = self.grid[square_id]
         neighbors = square.get_neighbors()
         ids = set()

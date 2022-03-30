@@ -59,16 +59,16 @@ class CampaignMap:
     def __init__(self, MAP_HEIGHT=1, MAP_WIDTH=1):
 
         def define_neighbors_ids(map_used, square_used):
-            ''' Должна возвращать список строк '''
-
+        
             def get_neighbor_id(height, width):
                 return "".join(["h", str(height), "w", str(width)])
-
+        
             neighbors_list = []
-            # neighbors top/bottom
+        
+            # в этом блоке проверяем наличие квадратов-соседей сверху и снизу
             height_min = 1
             height_max = map_used.height
-            # horizontal position is fixed
+            # т.к. ходим вверх и вниз, фиксируем значение по горизонтали 
             top_neighbor_width = bottom_neighbor_width = square_used.get_width()
             top_neighbor_height = square_used.get_height() - 1
             if top_neighbor_height >= height_min:
@@ -80,11 +80,11 @@ class CampaignMap:
                 bottom_neighbor_id = get_neighbor_id(bottom_neighbor_height, 
                                                      bottom_neighbor_width)
                 neighbors_list.append(bottom_neighbor_id)
-
-            # neighbors left/right
+        
+            # в этом блоке проверяем наличие квадратов-соседей слева и справа
             width_min = 1
             width_max = map_used.width
-            # vertical position is fixed
+            # т.к. ходим влево и вправо, фиксируем значение по вертикали
             left_neighbor_height = right_neighbor_height = square_used.get_height()
             left_neighbor_width = square_used.get_width() - 1
             if left_neighbor_width >= width_min:
@@ -96,8 +96,8 @@ class CampaignMap:
                 right_neighbor_id = get_neighbor_id(right_neighbor_height, 
                                                   right_neighbor_width)
                 neighbors_list.append(right_neighbor_id)
-
-            return neighbors_list
+        
+            return neighbors_list # список строковых констант
 
         def update_neighbors(map_used, square_used, map_grid_template):
             neighbors_ids = define_neighbors_ids(map_used, square_used)
@@ -113,7 +113,7 @@ class CampaignMap:
                 for width in range(1, map_used.width+1):
                     new_square = Square(height, width)
                     grid_template[new_square.get_id()] = new_square
-            # add neighbors to each square on grid
+            # обновить список соседей у каждого квадрата на карте
             for square_id in grid_template:
                 square = grid_template[square_id]
                 update_neighbors(map_used, square, grid_template)
@@ -122,7 +122,7 @@ class CampaignMap:
 
         self.height = MAP_HEIGHT
         self.width = MAP_WIDTH
-        self.__grid = create_grid(self) # словарь для мгновенного обращения по id
+        self.__grid = create_grid(self) # словарь для обращения к квадратам по id
 
     def access_square(self, square_id):
         return self.__grid[square_id]
